@@ -1,0 +1,17 @@
+{
+    "title": "Design Patterns",
+    "author": "hypc",
+    "plugins": [
+        "theme-official",
+        "codeblock-label",
+        "ace",
+        "-sharing",
+        "-fontsettings",
+        "katex",
+        {
+            "name": "mermaid",
+            "version": "git+https://github.com/hypc/gitbook-plugin-mermaid.git"
+        }
+    ]
+}
+
