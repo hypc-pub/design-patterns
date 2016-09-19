@@ -4,16 +4,16 @@
 
 ### 设计原则
 
-* [单一职责原则](principle/srp.md)
-* [里氏替换原则](principle/lsp.md)
-* [依赖倒置原则](principle/dip.md)
-* [接口隔离原则](principle/isp.md)
-* [迪米特法则](principle/lod.md)
-* [开闭原则](principle/ocp.md)
+* [单一职责原则](principles/srp.md)
+* [里氏替换原则](principles/lsp.md)
+* [依赖倒置原则](principles/dip.md)
+* [接口隔离原则](principles/isp.md)
+* [迪米特法则](principles/lod.md)
+* [开闭原则](principles/ocp.md)
 
 ### 设计模式
 
-* [单例模式]()
+* [单例模式](patterns/singleton-pattern.md)
 * [工厂方法模式]()
 * [抽象工厂模式]()
 * [模板方法模式]()
