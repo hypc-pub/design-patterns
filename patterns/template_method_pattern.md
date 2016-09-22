@@ -9,8 +9,8 @@
 classDiagram
     AbstractClass <|-- ConcreteClass1
     AbstractClass <|-- ConcreteClass2
-    AbstractClass : # void doAnything()
-    AbstractClass : # void doSomething()
+    AbstractClass : void doAnything()
+    AbstractClass : void doSomething()
     AbstractClass : + void templateMethod()
 ```
 
