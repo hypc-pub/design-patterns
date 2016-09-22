@@ -16,7 +16,7 @@
 * [单例模式](patterns/singleton-pattern.md)
 * [工厂方法模式](patterns/factory-method-pattern.md)
 * [抽象工厂模式](patterns/abstract_factory_pattern.md)
-* [模板方法模式]()
+* [模板方法模式](template_method_pattern.md)
 * [建造者模式]()
 * [代理模式]()
 * [原型模式]()
