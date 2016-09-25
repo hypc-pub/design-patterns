@@ -4,15 +4,7 @@
 
 > 为创建一组相关或相互依赖的对象提供一个接口，而且无需指定它们的具体类。
 
-```mermaid
-classDiagram
-    Client --> AbstractFactory
-    Client --> AbstractProduct
-    AbstractFactory <|-- ConcreteFactory
-    AbstractProduct <|-- ConcreteProduct
-    ConcreteFactory --> ConcreteProduct
-    AbstractFactory : + CreateProduct()
-```
+![abstract-factory-pattern](../res/images/abstract-factory-pattern.svg)
 
 ## 抽象工厂模式的优点
 

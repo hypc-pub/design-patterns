@@ -5,13 +5,7 @@
 
 > 顶一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。
 
-```mermaid
-classDiagram
-    Product <|-- ConcreteProduct
-    Creator <|-- ConcreteCreator
-    ConcreteProduct <-- ConcreteCreator
-    Creator : + FactoryMethod()
-```
+![factory-method-pattern](../res/images/factory-method-pattern.svg)
 
 ## 工厂方法模式的优点
 
@@ -38,13 +32,4 @@ classDiagram
 * 延迟初始化
 
     延迟初始化（Lazy initialization）：一个对象被消费完毕后，并不立刻释放，工厂类保持其初始状态，等待再次被使用。
-    延迟初始化是工厂模式的一个扩展应用，其通用类图如下：
-
-    ```mermaid
-    classDiagram
-        ProductFactory o--> Product
-        Product <|-- ConcreteProduct
-        ProductFactory : + static final Map prMap
-        ProductFactory : + static synchronized Product createProduct()
-        Product : + void doSomething()
-    ```
+    延迟初始化是工厂模式的一个扩展应用。

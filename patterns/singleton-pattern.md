@@ -4,13 +4,7 @@
 
 > 确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。
 
-```mermaid
-classDiagram
-    Singleton <|-- Client : 通过Singleton.getSingleton()方法访问
-    Singleton : - Singleton singleton
-    Singleton : - Singleton()
-    Singleton : + static Singleton getSingleton()
-```
+![singleton-pattern](../res/images/singleton-pattern.svg)
 
 ## 单例模式的优点
 

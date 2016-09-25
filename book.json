@@ -7,11 +7,7 @@
         "ace",
         "-sharing",
         "-fontsettings",
-        "katex",
-        {
-            "name": "mermaid",
-            "version": "git+https://github.com/hypc/gitbook-plugin-mermaid.git"
-        }
+        "katex"
     ]
 }
 
