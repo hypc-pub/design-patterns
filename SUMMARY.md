@@ -18,7 +18,7 @@
 * [抽象工厂模式](patterns/abstract_factory_pattern.md)
 * [模板方法模式](patterns/template_method_pattern.md)
 * [建造者模式](patterns/builder-pattern.md)
-* [代理模式]()
+* [代理模式](patterns/proxy-pattern.md)
 * [原型模式]()
 * [中介者模式]()
 * [命令模式]()
