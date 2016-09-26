@@ -19,7 +19,7 @@
 * [模板方法模式](patterns/template_method_pattern.md)
 * [建造者模式](patterns/builder-pattern.md)
 * [代理模式](patterns/proxy-pattern.md)
-* [原型模式]()
+* [原型模式](patterns/prototype-pattern.md)
 * [中介者模式]()
 * [命令模式]()
 * [责任链模式]()
