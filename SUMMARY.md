@@ -21,7 +21,7 @@
 * [代理模式](patterns/proxy-pattern.md)
 * [原型模式](patterns/prototype-pattern.md)
 * [中介者模式](patterns/mediator-pattern.md)
-* [命令模式]()
+* [命令模式](patterns/command-pattern.md)
 * [责任链模式]()
 * [装饰模式]()
 * [策略模式]()
