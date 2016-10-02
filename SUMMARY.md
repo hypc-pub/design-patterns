@@ -24,7 +24,7 @@
 * [命令模式](patterns/command-pattern.md)
 * [责任链模式](patterns/chain-of-responsibility-pattern.md)
 * [装饰模式](patterns/decorator-pattern.md)
-* [策略模式]()
+* [策略模式](patterns/strategy-pattern.md)
 * [适配器模式]()
 * [迭代器模式]()
 * [组合模式]()
