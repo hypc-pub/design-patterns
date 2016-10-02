@@ -23,7 +23,7 @@
 * [中介者模式](patterns/mediator-pattern.md)
 * [命令模式](patterns/command-pattern.md)
 * [责任链模式](patterns/chain-of-responsibility-pattern.md)
-* [装饰模式]()
+* [装饰模式](patterns/decorator-pattern.md)
 * [策略模式]()
 * [适配器模式]()
 * [迭代器模式]()
