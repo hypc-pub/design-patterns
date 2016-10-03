@@ -25,7 +25,7 @@
 * [责任链模式](patterns/chain-of-responsibility-pattern.md)
 * [装饰模式](patterns/decorator-pattern.md)
 * [策略模式](patterns/strategy-pattern.md)
-* [适配器模式]()
+* [适配器模式](patterns/adapter-pattern.md)
 * [迭代器模式]()
 * [组合模式]()
 * [观察者模式]()
@@ -37,3 +37,6 @@
 * [享元模式]()
 * [桥梁模式]()
 
+---------------------
+
+* [术语表](GLOSSARY.md)
