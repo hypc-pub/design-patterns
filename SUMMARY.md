@@ -28,7 +28,7 @@
 * [适配器模式](patterns/adapter-pattern.md)
 * [迭代器模式](patterns/iterator-pattern.md)
 * [组合模式](patterns/composite-pattern.md)
-* [观察者模式]()
+* [观察者模式](patterns/observer-pattern.md)
 * [门面模式]()
 * [备忘录模式]()
 * [访问者模式]()
