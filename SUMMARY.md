@@ -27,7 +27,7 @@
 * [策略模式](patterns/strategy-pattern.md)
 * [适配器模式](patterns/adapter-pattern.md)
 * [迭代器模式](patterns/iterator-pattern.md)
-* [组合模式]()
+* [组合模式](patterns/composite-pattern.md)
 * [观察者模式]()
 * [门面模式]()
 * [备忘录模式]()
