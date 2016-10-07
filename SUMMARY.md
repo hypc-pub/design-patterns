@@ -30,7 +30,7 @@
 * [组合模式](patterns/composite-pattern.md)
 * [观察者模式](patterns/observer-pattern.md)
 * [门面模式](patterns/facade-pattern.md)
-* [备忘录模式]()
+* [备忘录模式](patterns/memento-pattern.md)
 * [访问者模式]()
 * [状态模式]()
 * [解释器模式]()
