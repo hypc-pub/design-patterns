@@ -31,7 +31,7 @@
 * [观察者模式](patterns/observer-pattern.md)
 * [门面模式](patterns/facade-pattern.md)
 * [备忘录模式](patterns/memento-pattern.md)
-* [访问者模式]()
+* [访问者模式](patterns/visitor-pattern.md)
 * [状态模式]()
 * [解释器模式]()
 * [享元模式]()
