@@ -34,7 +34,7 @@
 * [访问者模式](patterns/visitor-pattern.md)
 * [状态模式](patterns/state-pattern.md)
 * [解释器模式](patterns/interpreter-pattern.md)
-* [享元模式]()
+* [享元模式](patterns/flyweight-pattern.md)
 * [桥梁模式]()
 
 ---------------------
