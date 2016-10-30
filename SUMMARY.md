@@ -35,7 +35,7 @@
 * [状态模式](patterns/state-pattern.md)
 * [解释器模式](patterns/interpreter-pattern.md)
 * [享元模式](patterns/flyweight-pattern.md)
-* [桥梁模式]()
+* [桥梁模式](patterns/bridge-pattern.md)
 
 ---------------------
 
