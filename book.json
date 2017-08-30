@@ -2,7 +2,7 @@
     "title": "Design Patterns",
     "author": "hypc",
     "plugins": [
-        "theme-official",
+        "theme-opendocs",
         "codeblock-label",
         "ace",
         "-sharing",
