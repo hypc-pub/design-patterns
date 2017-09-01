@@ -7,6 +7,6 @@ RUN npm install -g http-server \
     && gitbook install \
     && gitbook build
 
-EXPOSE 80
+EXPOSE 4000
 
-CMD ["http-server", "/app/_book", "-p", "80"]
+CMD ["http-server", "/app/_book", "-p", "4000"]
