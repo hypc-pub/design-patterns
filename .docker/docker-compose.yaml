@@ -1,0 +1,9 @@
+version: "2"
+services:
+    master:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        ports:
+            - 4010:4000
+        restart: always
