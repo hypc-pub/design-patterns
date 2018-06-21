@@ -1,0 +1,11 @@
+version: "2"
+services:
+    master:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        image: design-patterns
+        container_name: design-patterns
+        ports:
+            - 4010:4000
+        restart: always

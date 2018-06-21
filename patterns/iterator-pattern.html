@@ -1,0 +1,759 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>迭代器模式 · Design Patterns</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="composite-pattern.html" />
+    
+    
+    <link rel="prev" href="adapter-pattern.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Design Patterns</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="composite-pattern.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="adapter-pattern.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            简介
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">设计原则</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../principles/srp.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            单一职责原则
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../principles/lsp.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            里氏替换原则
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../principles/dip.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            依赖倒置原则
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../principles/isp.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            接口隔离原则
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../principles/lod.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            迪米特法则
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../principles/ocp.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            开闭原则
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">设计模式</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="singleton-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            单例模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="factory-method-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            工厂方法模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="abstract_factory_pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            抽象工厂模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="template_method_pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            模板方法模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="builder-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            建造者模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="proxy-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            代理模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="prototype-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            原型模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="mediator-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            中介者模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="command-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            命令模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="chain-of-responsibility-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            责任链模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="decorator-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            装饰模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="strategy-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            策略模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="adapter-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            适配器模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="iterator-pattern.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            迭代器模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="composite-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            组合模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="observer-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            观察者模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="facade-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            门面模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="memento-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            备忘录模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="visitor-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            访问者模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="state-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            状态模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="interpreter-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            解释器模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="flyweight-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            享元模式
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="bridge-pattern.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            桥梁模式
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../GLOSSARY.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            术语表
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;&#xFF08;iterator-pattern&#xFF09;">&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;&#xFF08;Iterator Pattern&#xFF09;</h1>
+<blockquote>
+<p>Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</p>
+<p>&#x5B83;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x5BF9;&#x8C61;&#x4E2D;&#x5404;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x53C8;&#x4E0D;&#x9700;&#x8981;&#x66B4;&#x9732;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x90E8;&#x7EC6;&#x8282;&#x3002;</p>
+</blockquote>
+<p><img src="../res/images/iterator-pattern.svg" alt="iterator-pattern"></p>
+<ul>
+<li><p>Iterator&#x62BD;&#x8C61;&#x8FED;&#x4EE3;&#x5668;</p>
+<p>  &#x62BD;&#x8C61;&#x8FED;&#x4EE3;&#x5668;&#x8D1F;&#x8D23;&#x5B9A;&#x4E49;&#x8BBF;&#x95EE;&#x548C;&#x904D;&#x5386;&#x5143;&#x7D20;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x800C;&#x4E14;&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x6709;&#x56FA;&#x5B9A;3&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;<code>first()</code>&#x83B7;&#x5F97;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>next()</code>&#x8BBF;&#x95EE;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>isDone()</code>&#x6216;<code>hasNext()</code>&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x5230;&#x5E95;&#x90E8;&#x3002;</p>
+</li>
+<li><p>ConcreteIterator&#x5177;&#x4F53;&#x8FED;&#x4EE3;&#x5668;</p>
+<p>  &#x5177;&#x4F53;&#x8FED;&#x4EE3;&#x5668;&#x89D2;&#x8272;&#x8981;&#x5B9E;&#x73B0;&#x8FED;&#x4EE3;&#x5668;&#x63A5;&#x53E3;&#xFF0C;&#x5B8C;&#x6210;&#x5BB9;&#x5668;&#x5143;&#x7D20;&#x7684;&#x904D;&#x5386;&#x3002;</p>
+</li>
+<li><p>Aggregate&#x62BD;&#x8C61;&#x5BB9;&#x5668;</p>
+<p>  &#x5BB9;&#x5668;&#x89D2;&#x8272;&#x8D1F;&#x8D23;&#x63D0;&#x4F9B;&#x521B;&#x5EFA;&#x5177;&#x4F53;&#x8FED;&#x4EE3;&#x5668;&#x89D2;&#x8272;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5FC5;&#x7136;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;<code>creteIterator()</code>&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>ConcreteAggregate&#x5177;&#x4F53;&#x5BB9;&#x5668;</p>
+<p>  &#x5177;&#x4F53;&#x5BB9;&#x5668;&#x5B9E;&#x73B0;&#x5BB9;&#x5668;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x521B;&#x5EFA;&#x51FA;&#x5BB9;&#x7EB3;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+</li>
+</ul>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"迭代器模式","level":"3.14","depth":1,"next":{"title":"组合模式","level":"3.15","depth":1,"path":"patterns/composite-pattern.md","ref":"patterns/composite-pattern.md","articles":[]},"previous":{"title":"适配器模式","level":"3.13","depth":1,"path":"patterns/adapter-pattern.md","ref":"patterns/adapter-pattern.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","codeblock-label","ace","-sharing","-fontsettings","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"codeblock-label":{},"ace":{},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-opendocs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Design Patterns","gitbook":"*"},"file":{"path":"patterns/iterator-pattern.md","mtime":"2018-06-21T11:39:32.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T11:40:26.009Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

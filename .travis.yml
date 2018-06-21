@@ -1,0 +1,15 @@
+language: node_js
+node_js: 8
+install:
+  - npm install -g gitbook-cli
+  - gitbook install
+script:
+  - gitbook build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: _book
+  on:
+    tags: true
