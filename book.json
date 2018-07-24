@@ -1,13 +1,22 @@
 {
     "title": "Design Patterns",
+    "description": "",
     "author": "hypc",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hypc-pub/design-patterns"
+    },
     "plugins": [
-        "theme-opendocs",
-        "codeblock-label",
-        "ace",
+        "theme-opendocs", "advanced-emoji",
+        "ace", "codeblock-label",
+        "simpletabs",
+        "include",
+        "katex",
+        "-highlight", "prism",
+        "-lunr", "-search", "search-pro",
         "-sharing",
-        "-fontsettings",
-        "katex"
-    ]
+        "-fontsettings"
+    ],
+    "gitbook": ">=3.0.0",
+    "pluginsConfig": {}
 }
-
