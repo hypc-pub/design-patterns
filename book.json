@@ -15,8 +15,13 @@
         "-highlight", "prism",
         "-lunr", "-search", "search-pro",
         "-sharing",
-        "-fontsettings"
+        "-fontsettings",
+        "ga"
     ],
     "gitbook": ">=3.0.0",
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-131598830-2"
+        }
+    }
 }
